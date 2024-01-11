@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/content/css/style.css">
+    <script src="/scripts/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/55174c58a9.js" crossorigin="anonymous"></script>
+    <title>WestCoast Education</title>
 </head>
 <body>
-    
+    <header>
+        <h1>WestCoast Education</h1>
+        <p>Välkommen till vår plattform för tekniska utbildningar!</p>
+    </header>
+
+    <main>
+        <section id="popular-courses">
+            <h2>Populära Kurser</h2>
+
+            <div class="course-card">
+                <img src="course1.jpg" alt="Kursbild">
+                <h3>Kurstitel 1</h3>
+                <p>Kursnummer: 12345</p>
+                <p>Antal dagar: 5</p>
+                <p>Tillgänglig som klassrum och distanskurs</p>
+                <p>Planerad datum: 2024-02-01</p>
+                <button onclick="showDetails(12345)">Visa detaljer</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 WestCoast Education</p>
+    </footer>   
 </body>
 </html>

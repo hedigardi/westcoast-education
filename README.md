@@ -1,1 +1,1 @@
-# westcoast-education
+# WestCoast Education
