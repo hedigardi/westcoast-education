@@ -105,7 +105,7 @@ const createDetailsList = (course) => {
 const createBookButton = () => {
   const bookButton = document.createElement('a');
   bookButton.classList.add('button');
-  bookButton.setAttribute('href', '#'); // Lägg till den riktiga länken när det finns en bokningssida
+  bookButton.setAttribute('href', '#'); // Länk till bokningssida
   bookButton.appendChild(document.createTextNode('Boka kursen'));
   return bookButton;
 };

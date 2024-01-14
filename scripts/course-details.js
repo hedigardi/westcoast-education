@@ -10,13 +10,10 @@ async function initPage() {
         const httpClient = new HttpClient('http://localhost:3000/courses');
         const courses = await httpClient.get();
 
-        // Hämta den specifika kursen baserat på courseId
         const selectedCourse = courses.find(course => course.id == courseId);
 
-        // Visa kursdetaljerna på sidan
         displayCourseDetails(selectedCourse);
     } catch (error) {
-      // Skicka tillbaka felet till den som anropar metoden...
       throw new Error(`Ett fel inträffade i get metoden: ${error}`);
     }
 
