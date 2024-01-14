@@ -57,4 +57,66 @@ const addImageClickHandler = (images) => {
   });
 };
 
-export { createCard, addImageClickHandler };
+const createCardDetails = (course) => {
+  const cardDetailsDiv = document.createElement('div');
+  cardDetailsDiv.classList.add('course-card-details');
+  cardDetailsDiv.appendChild(createImage(course.imageUrl));
+  cardDetailsDiv.appendChild(createTitle(course));
+  cardDetailsDiv.appendChild(createDescription(course));
+  cardDetailsDiv.appendChild(createDetailsHeader());
+  cardDetailsDiv.appendChild(createDetailsList(course));
+  cardDetailsDiv.appendChild(createBookButton());
+
+  return cardDetailsDiv;
+};
+
+const createDescription = (course) => {
+  const description = document.createElement('p');
+  description.appendChild(document.createTextNode(course.description));
+  return description;
+};
+
+const createDetailsHeader = () => {
+  const detailsHeader = document.createElement('h4');
+  detailsHeader.appendChild(document.createTextNode('Mer detaljer'));
+  return detailsHeader;
+};
+
+const createDetailsList = (course) => {
+  const detailsList = document.createElement('ul');
+
+  const detailsItems = [
+    'Kursnummer: ' + course.number,
+    'Tillgänglighet: ' + course.availability,
+    'Varaktighet: ' + course.duration + ' timmar',
+    'Kursstart: ' + course.scheduleddate,
+    'Pris: ' + course.price + ' kr'
+  ];
+
+  detailsItems.forEach((itemText) => {
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(itemText));
+    detailsList.appendChild(li);
+  });
+
+  return detailsList;
+};
+
+const createBookButton = () => {
+  const bookButton = document.createElement('a');
+  bookButton.classList.add('button');
+  bookButton.setAttribute('href', '#'); // Lägg till den riktiga länken när det finns en bokningssida
+  bookButton.appendChild(document.createTextNode('Boka kursen'));
+  return bookButton;
+};
+
+const displayCourseDetails = (course) => {
+  const container = document.getElementById("course-details-container");
+
+  container.innerHTML = "";
+  const cardDetails = createCardDetails(course);
+
+  container.appendChild(cardDetails);
+};
+
+export { createCard, addImageClickHandler, displayCourseDetails };
