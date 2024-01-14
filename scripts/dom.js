@@ -40,7 +40,7 @@ const createInfoButton = (id) => {
   a.classList.add('button');
   a.setAttribute('href', `/pages/course-details.html?id=${id}`);
   a.appendChild(
-    document.createTextNode('Mer detalj om kursen')
+    document.createTextNode('Mer information om kursen')
   );
 
   return a;
