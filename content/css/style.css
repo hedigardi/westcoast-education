@@ -93,7 +93,8 @@ a:active {
 
 .page-title h2 {
   font-size: 2rem;
-  margin: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
   width: 100%;
 }
@@ -103,6 +104,14 @@ a:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.admin-courses {
+  margin: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .course-card {
@@ -161,6 +170,22 @@ footer {
   bottom: 0;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.container-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
 @media only screen and (max-width: 768px) {
   .courses {
     gap: 2rem;
@@ -168,6 +193,10 @@ footer {
   .course-card {
     flex-basis: 200px;
     flex-grow: 1;
+  }
+  .container-card {
+    margin-bottom: unset;
+    margin-bottom: 1rem;
   }
   .course-card-details img {
     width: 100%;

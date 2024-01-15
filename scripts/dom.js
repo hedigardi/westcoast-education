@@ -78,7 +78,7 @@ const createDescription = (course) => {
 
 const createDetailsHeader = () => {
   const detailsHeader = document.createElement('h4');
-  detailsHeader.appendChild(document.createTextNode('Mer detaljer'));
+  detailsHeader.appendChild(document.createTextNode('-> Kursdetaljer'));
   return detailsHeader;
 };
 
@@ -86,7 +86,7 @@ const createDetailsList = (course) => {
   const detailsList = document.createElement('ul');
 
   const detailsItems = [
-    'Kursnummer: ' + course.number,
+    'Kursnummer: ' + course.id,
     'Tillgänglighet: ' + course.availability,
     'Varaktighet: ' + course.duration + ' timmar',
     'Kursstart: ' + course.scheduleddate,
@@ -106,7 +106,7 @@ const createBookButton = () => {
   const bookButton = document.createElement('a');
   bookButton.classList.add('button');
   bookButton.setAttribute('href', '#'); // Länk till bokningssida
-  bookButton.appendChild(document.createTextNode('Boka kursen'));
+  bookButton.appendChild(document.createTextNode('Skriv in dig'));
   return bookButton;
 };
 
@@ -119,4 +119,24 @@ const displayCourseDetails = (course) => {
   container.appendChild(cardDetails);
 };
 
-export { createCard, addImageClickHandler, displayCourseDetails };
+const createCourseList = (courses, element) => {
+  courses.forEach((course) => {
+    const container = createDiv();
+    container.setAttribute('courseid', course.id);
+    container.classList.add('container-card');
+    container.appendChild(createSpan(course.title));
+    element.appendChild(container);
+  });
+};
+
+const createDiv = () => {
+  return document.createElement('div');
+};
+
+const createSpan = (text) => {
+  const span = document.createElement('span');
+  span.innerText = text;
+  return span;
+};
+
+export { createCard, addImageClickHandler, displayCourseDetails, createCourseList };
