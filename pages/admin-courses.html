@@ -7,7 +7,7 @@
     <meta name="description" content="Välkommen till WestCoast Education, en plattform för tekniska utbildningar">
     <link rel="icon" type="image/x-icon" href="/content/images/favicon.ico">
     <link rel="stylesheet" href="/content/css/style.css">
-    <script src="/scripts/courses-admin-list.js" defer type="module"></script>
+    <script src="/scripts/courses-admin-list.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/55174c58a9.js" crossorigin="anonymous"></script>
     <title>WestCoast Education | Admin - Kurser</title>
 </head>
@@ -34,7 +34,10 @@
     <main>
         <section class="page-title">
 			<h2>Administration > Kurser</h2>
-		</section>      
+		</section>
+        <div class="button-container">
+            <a href="/pages/add-course.html" class="button-add">Lägg till en ny kurs</a>
+        </div>  
         <section class="admin-courses" id="courses"></section>
     </main>
 

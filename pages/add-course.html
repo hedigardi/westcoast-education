@@ -7,9 +7,9 @@
     <meta name="description" content="Välkommen till WestCoast Education, en plattform för tekniska utbildningar">
     <link rel="icon" type="image/x-icon" href="/content/images/favicon.ico">
     <link rel="stylesheet" href="/content/css/style.css">
-    <script src="/scripts/edit-course.js" defer type="module"></script>
+    <script src="/scripts/add-course.js" defer type="module"></script>
     <script src="https://kit.fontawesome.com/55174c58a9.js" crossorigin="anonymous"></script>
-    <title>WestCoast Education | Uppdatera kurs</title>
+    <title>WestCoast Education | Lägg till ny kurs</title>
 </head>
 <body>
     <header>
@@ -33,10 +33,10 @@
 
     <main>
         <section class="page-title">
-			<h2>Uppdatera kurs</h2>
-		</section>      
+			<h2>Lägg till en ny kurs</h2>
+		</section>  
         <section class="container">
-            <form id="updateCourseForm">
+            <form id="addCourseForm">
             <div>
                 <label for="title">Kurstitel</label>
                 <input type="text" name="title" id="title" placeholder="Ange kurstitel">
@@ -50,7 +50,7 @@
                 <input type="number" name="duration" id="duration" placeholder="Ange varaktighet">
             </div>
             <div>
-            <label for="availability">Tillgänglighet</label>
+                <label for="availability">Tillgänglighet</label>
                 <input type="text" name="availability" id="availability" placeholder="Ange tillgänglighet">
             </div>
             <div>
@@ -63,15 +63,14 @@
             </div>
             <div>
                 <label for="imageUrl">Bild url</label>
-                <input type="text" name="imageUrl" id="imageUrl" placeholder="Ange url på bilden">
+                <input type="text" name="imageUrl" id="imageUrl" placeholder="Ange url på kursen">
             </div>
             <div>
                 <label for="description">Beskrivning</label>
-                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                <textarea name="description" id="description" cols="30" rows="10" placeholder="Ange beskrivning på kursen"></textarea>
             </div>
             <div>
-                <button type="submit" class="button-add">Spara</button>
-                <button id="delete" class="button-remove">Radera kurs</button>
+                <button type="submit" class="button-add">Lägg till</button>
             </div>
             </form>
         </section>

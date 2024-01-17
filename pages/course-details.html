@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/content/css/style.css">
     <script src="/scripts/course-details.js" defer type="module"></script>
     <script src="https://kit.fontawesome.com/55174c58a9.js" crossorigin="anonymous"></script>
-    <title>WestCoast Education | Kursinnehåll</title>
+    <title>WestCoast Education | Kursdetaljer</title>
 </head>
 <body>
     <header>
@@ -36,6 +36,63 @@
 			<h2>Mer information om kursen</h2>
 		</section>      
         <section class="courses" id="course-details-container"></section>
+
+        <section class="courses" id="registration">
+            <div class="course-card-details">
+                <h2>Ej inloggad</h2>
+                <form id="userForm">
+                    <div>
+                        <label for="username">Användarnamn</label>
+                        <input type="text" name="username" id="username" placeholder="Ange användarnamn">
+                    </div>
+                    <div>
+                        <label for="password">Lösenord</label>
+                        <input type="password" name="password" id="password" placeholder="Ange lösenord">
+                    </div>
+                    <div>
+                        <button type="submit" class="button-add" id="signinButton">Logga in</button>
+                        <button type="submit" class="button-create" id="registerButton">Skapa konto</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="courses" id="logged-in">
+            <div class="course-card-details">
+                <h2>Inloggad</h2>
+                <form id="bookingForm">
+                <div>
+                    <label for="availability">Tillgänglighet</label>
+                    <select required name="availability" id="availability">
+                        <option value="">Välj tillgänglighet</option>
+                        <option value="Klassrum">Klassrum</option>
+                        <option value="Distanskurs">Distanskurs</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="name">Ditt namn</label>
+                    <input type="text" name="name" id="name" placeholder="Ange ditt namn">
+                </div>
+                <div>
+                    <label for="address">Faktureringsadress</label>
+                    <input type="text" name="address" id="address" placeholder="Ange faktureringsadress">
+                </div>
+                <div>
+                    <label for="email">E-postadress</label>
+                    <input type="email" name="email" id="email" placeholder="Ange e-postadress">
+                </div>
+                <div>
+                    <label for="phone">Mobilnummer</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Ange mobilnummer">
+                </div>
+                <div>
+                    <button type="submit" class="button-add">Boka kurs</button>
+                </div>
+            </form>
+            </div>
+        </section>
+        
+
     </main>
 
     <footer>

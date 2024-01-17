@@ -87,6 +87,7 @@ const createDetailsList = (course) => {
 
   const detailsItems = [
     'Kursnummer: ' + course.id,
+    'Lärare: ' + course.teacher,
     'Tillgänglighet: ' + course.availability,
     'Varaktighet: ' + course.duration + ' timmar',
     'Kursstart: ' + course.scheduleddate,

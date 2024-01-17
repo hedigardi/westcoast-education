@@ -58,6 +58,55 @@ a:active {
     background-color: #023e8a;
 }
 
+.button-add {
+    display: inline-block;
+    background-color: #02a32b;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.button-add:hover {
+    background-color: #018321;
+}
+
+.button-remove {
+    display: inline-block;
+    background-color: #bd0101;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.button-remove:hover {
+    background-color: #830000;
+}
+
+.button-create {
+    display: inline-block;
+    background-color: #bd7201;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.button-create:hover {
+    background-color: #7a4a02;
+}
+
+.button-container {
+    text-align: center;
+}
+
 .page-title h2 {
     font-size: 2rem;
     margin-top: 2rem;
@@ -102,7 +151,7 @@ a:active {
 
 .course-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .course-card p {
@@ -120,21 +169,11 @@ a:active {
 }
 
 .course-card-details img {
-    width: 30%;
+    width: 35%;
     height: auto;
     margin-right: 2rem;
     border-radius: 5px;
     float: left;
-}
-
-footer {
-    background-color: #0077b6;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
 .container {
@@ -151,6 +190,28 @@ footer {
     padding: 1rem;
     margin-bottom: 1rem;
     width: 100%;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #0077b6;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 @media only screen and (max-width: 768px) {

@@ -23,7 +23,14 @@ const loadDataToForm = (course) => {
   for (let [key, value] of entries) {
     if (key !== 'id') {
       const input = form.elements[key];
-      input.value = value;
+      if (input) {
+        if (key === 'scheduleddate') {
+          const formattedDate = new Date(value).toLocaleDateString();
+          input.value = formattedDate;
+        } else {
+          input.value = value;
+        }
+      }
     }
   }
 };

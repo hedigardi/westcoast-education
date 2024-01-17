@@ -7,7 +7,6 @@ export default class HttpClient {
 
   async get() {
     try {
-      // Api(endpoint)
       const response = await fetch(this.#url);
 
       if (response.ok) {
