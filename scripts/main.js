@@ -1,6 +1,6 @@
 import { navAnimation } from "./nav.js";
 import HttpClient from "./http.js";
-import { displayTopCourses } from "./topCourses.js";
+import { displayTopCourses } from "./top-courses.js";
 
 async function initPage() {
   navAnimation();
