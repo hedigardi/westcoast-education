@@ -6,9 +6,23 @@ const form = document.querySelector('#addCourseForm');
 const addCourse = async (e) => {
   e.preventDefault();
 
-  const course = new FormData(form);
-  const obj = convertFormDataToJson(course);
-  saveCourse(obj);
+  const formData = new FormData(form);
+  const courseData = convertFormDataToJson(formData);
+
+  const learningType = {
+    classroom: courseData.classroom,
+    distance: courseData.distance,
+  };
+
+  delete courseData.classroom;
+  delete courseData.distance;
+
+  const course = {
+    ...courseData,
+    learningType: learningType,
+  };
+
+  saveCourse(course);
 };
 
 const saveCourse = async (course) => {

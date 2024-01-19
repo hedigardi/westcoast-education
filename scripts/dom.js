@@ -65,7 +65,6 @@ const createCardDetails = (course) => {
   cardDetailsDiv.appendChild(createDescription(course));
   cardDetailsDiv.appendChild(createDetailsHeader());
   cardDetailsDiv.appendChild(createDetailsList(course));
-  cardDetailsDiv.appendChild(createBookButton());
 
   return cardDetailsDiv;
 };
@@ -88,27 +87,48 @@ const createDetailsList = (course) => {
   const detailsItems = [
     'Kursnummer: ' + course.id,
     'Lärare: ' + course.teacher,
-    'Tillgänglighet: ' + course.availability,
     'Varaktighet: ' + course.duration + ' timmar',
     'Kursstart: ' + course.scheduleddate,
-    'Pris: ' + course.price + ' kr'
+    'Pris: ' + course.price + ' kr',
+    'Undervisningsupplägg: ', createLearningTypeCheckbox(course.learningType)
   ];
 
-  detailsItems.forEach((itemText) => {
+  detailsItems.forEach((item) => {
     const li = document.createElement('li');
-    li.appendChild(document.createTextNode(itemText));
+    li.appendChild(typeof item === 'string' ? document.createTextNode(item) : item);
     detailsList.appendChild(li);
   });
 
   return detailsList;
 };
 
-const createBookButton = () => {
-  const bookButton = document.createElement('a');
-  bookButton.classList.add('button');
-  bookButton.setAttribute('href', '#'); // Länk till bokningssida
-  bookButton.appendChild(document.createTextNode('Skriv in dig'));
-  return bookButton;
+const createLearningTypeCheckbox = (learningType) => {
+  const checkboxContainer = document.createElement('span');
+
+  const classrumCheckbox = document.createElement('input');
+  classrumCheckbox.type = 'checkbox';
+  classrumCheckbox.checked = learningType.classroom;
+  classrumCheckbox.disabled = true;
+  classrumCheckbox.classList.add('course-card-details-checkbox');
+
+  const classrumLabel = document.createElement('label');
+  classrumLabel.textContent = ' Klassrum ';
+
+  const distanceCheckbox = document.createElement('input');
+  distanceCheckbox.type = 'checkbox';
+  distanceCheckbox.checked = learningType.distance;
+  distanceCheckbox.disabled = true;
+  distanceCheckbox.classList.add('course-card-details-checkbox');
+
+  const distanceLabel = document.createElement('label');
+  distanceLabel.textContent = ' Distans ';
+
+  checkboxContainer.appendChild(classrumCheckbox);
+  checkboxContainer.appendChild(classrumLabel);
+  checkboxContainer.appendChild(distanceCheckbox);
+  checkboxContainer.appendChild(distanceLabel);
+
+  return checkboxContainer;
 };
 
 const displayCourseDetails = (course) => {
@@ -140,4 +160,80 @@ const createSpan = (text) => {
   return span;
 };
 
-export { createCard, addImageClickHandler, displayCourseDetails, createCourseList };
+const createAdminBookingSection = (course, enrolledUsers, courseBookings) => {
+  const courseSection = document.createElement('div');
+  courseSection.classList.add('container-card');
+
+  const learningTypeText = courseBookings.length > 0 ?
+    (courseBookings[0].classroom ? 'Klassrum' : 'Distans') :
+    (course.classroom ? 'Klassrum' : 'Distans');
+
+  const courseTitle = document.createElement('h3');
+  courseTitle.textContent = `Kurs: ${course.title} (${learningTypeText})`;
+  courseSection.appendChild(courseTitle);
+
+  if (enrolledUsers.length > 0) {
+    const userList = document.createElement('ul');
+    const enrolledUsersListItem = document.createElement('li');
+    enrolledUsersListItem.textContent = `Anmälda användare:`;
+    userList.appendChild(enrolledUsersListItem);
+
+    enrolledUsers.forEach(user => {
+      const userDetail = document.createElement('p');
+      userDetail.textContent = `${user.fullname}, ${user.username}`;
+      userList.appendChild(userDetail);
+    });
+
+    courseSection.appendChild(userList);
+  }
+
+  if (courseBookings.length > 0) {
+    const bookingList = document.createElement('ul');
+    const courseBookingsListItem = document.createElement('li');
+    courseBookingsListItem.textContent = `Anmälda användare:`;
+    bookingList.appendChild(courseBookingsListItem);
+
+    courseBookings.forEach(booking => {
+      const userDetail = document.createElement('p');
+      userDetail.textContent = `${booking.fullname}, ${booking.username}`;
+      bookingList.appendChild(userDetail);
+    });
+
+    courseSection.appendChild(bookingList);
+  }
+
+  return courseSection;
+};
+
+const showUserInfo = () => {
+    const loggedInUserInfo = document.getElementById('loggedIn-userInfo');
+
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+    const welcomeDiv = document.createElement('div');
+    welcomeDiv.classList.add('welcome');
+
+    const logoutButton = document.createElement('button');
+    logoutButton.textContent = 'Logga ut';
+    logoutButton.classList.add('button');
+    logoutButton.addEventListener('click', logoutHandler);
+
+    const fullnameParagraph = document.createElement('p');
+    fullnameParagraph.textContent = `Välkommen, ${loggedInUser.fullname}!`;
+
+    welcomeDiv.appendChild(fullnameParagraph);
+    welcomeDiv.appendChild(logoutButton);
+
+    loggedInUserInfo.innerHTML = ''; 
+    loggedInUserInfo.appendChild(welcomeDiv);
+};
+
+const logoutHandler = () => {
+    localStorage.removeItem('loggedInUser');
+    const loggedInUserInfo = document.getElementById('loggedIn-userInfo');
+    loggedInUserInfo.innerHTML = ''; 
+
+    window.location.reload();
+};
+
+export { createCard, addImageClickHandler, displayCourseDetails, createCourseList, createAdminBookingSection, showUserInfo };

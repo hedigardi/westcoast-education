@@ -27,6 +27,12 @@ const loadDataToForm = (course) => {
         if (key === 'scheduleddate') {
           const formattedDate = new Date(value).toLocaleDateString();
           input.value = formattedDate;
+        } else if (key === 'learningType') {
+          const classroomCheckbox = form.elements['classroom'];
+          const distanceCheckbox = form.elements['distance'];
+
+          classroomCheckbox.checked = value.classroom === true;
+          distanceCheckbox.checked = value.distance === true;
         } else {
           input.value = value;
         }
@@ -38,14 +44,26 @@ const loadDataToForm = (course) => {
 const updateCourse = async (e) => {
   e.preventDefault();
 
-  const course = new FormData(form);
-  const obj = convertFormDataToJson(course);
+  const formData = new FormData(form);
+  const obj = convertFormDataToJson(formData);
+
+  obj.classroom = form.elements['classroom'].checked;
+  obj.distance = form.elements['distance'].checked;
+
+  obj.learningType = {
+    classroom: obj.classroom,
+    distance: obj.distance,
+  };
+
+  delete obj.classroom;
+  delete obj.distance;
 
   const url = `http://localhost:3000/courses/${courseId}`;
   const http = new HttpClient(url);
   await http.update(obj);
 
   location.href = './admin-courses.html';
+
 };
 
 const removeCourse = async () => {

@@ -5,11 +5,14 @@
       "title": "Cloud Computing for Beginners",
       "teacher": "Tilia Jonasson",
       "duration": 3,
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "price": 349,
       "popularity": 26,
-      "availability": "Klassrum/Distanskurs",
+      "scheduleddate": "3/1/2024",
       "imageUrl": "course1.jpg",
-      "scheduleddate": "2024-03-01",
       "description": "Over the last couple of years, many business companies decided to use more and more cloud services as part of their digital transformation. They are trying to be more innovative and flexible to the dynamic business landscape by leveraging the power of the cloud. Cloud computing includes a variety of cloud service models, like SaaS, IaaS, PaaS, and FaaS. Each of them is a complete category of cloud services used to solve a variety of business challenges."
     },
     {
@@ -19,7 +22,10 @@
       "duration": 7,
       "price": 399,
       "popularity": 44,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course2.jpg",
       "scheduleddate": "2024-03-15",
       "description": "Azure is a rapidly growing technology that is being adopted by many corporations. Nearly all organizations have migrated to the cloud or have a plan to do so. The skills required to manage cloud based resources are necessary for those that are entering the IT field and those that are currently in IT."
@@ -31,7 +37,10 @@
       "duration": 5,
       "price": 249,
       "popularity": 31,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course3.jpg",
       "scheduleddate": "2024-04-10",
       "description": "Do you want to be a master of Active Directory? If so, this course is intended for you. This course will broaden your knowledge of active directory domain services (AD DS). You will learn how to configure some of the key features in Active Directory such as Active Directory Domain Services (AD DS), Group Policy, Dynamic Access Control (DAC), Work Folders, Work Place Join, Certificate Services, Rights Management Services (RMS), Federation Services, as well as integrating your on premise environment with cloud based technologies such as Windows Azure Active Directory."
@@ -43,7 +52,10 @@
       "duration": 5,
       "price": 499,
       "popularity": 49,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course4.jpg",
       "scheduleddate": "2024-04-20",
       "description": "This course is designed to provide you with a solid foundation for Windows DNS server. You will learn by completing the following tasks."
@@ -55,7 +67,10 @@
       "duration": 2,
       "price": 399,
       "popularity": 56,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course5.jpg",
       "scheduleddate": "2024-05-02",
       "description": "This course is meant for anyone curious about InfoSec and just starting out in this field. Terminology and concepts are explained with the goal of being clear even to those who hear of them for the very first time."
@@ -67,7 +82,10 @@
       "duration": 3,
       "price": 199,
       "popularity": 72,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course6.jpg",
       "scheduleddate": "2024-05-15",
       "description": "A beginner level comprehensive course that includes step-by-step explanations of core security concepts along with follow-up quizzes and hands on labs to ensure a solid learning for the course taker."
@@ -79,7 +97,10 @@
       "duration": 3,
       "price": 449,
       "popularity": 15,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course7.jpg",
       "scheduleddate": "2024-06-01",
       "description": "The course covers the basics of Vulnerability Management. The course dives into detail information of on the critical issues of vulnerabilities. It covers risk management and covers the basis of penetration testing vs vulnerability management as well. The course also includes lab simulation of vulnerability management processes. The lab introduces the students to Nessus and how vulnerabilities are tracked in the security scanner based on the respective critical level."
@@ -91,7 +112,10 @@
       "duration": 1,
       "price": 599,
       "popularity": 63,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course8.jpg",
       "scheduleddate": "2024-06-15",
       "description": "In today's fast-paced digital landscape, securing your Windows environment is no longer optional—it's essential. This course is meticulously designed to help you fortify your systems in the most efficient manner."
@@ -103,7 +127,10 @@
       "duration": 6,
       "price": 549,
       "popularity": 52,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course9.jpg",
       "scheduleddate": "2024-07-02",
       "description": "We know that network security is the basic requirement of an IT company, so it is necessary for every student in the IT industry to learn the basic concept of network security. In this course, you will learn the fundamentals of network security and take the first leap into the world of the IT industry."
@@ -115,7 +142,10 @@
       "duration": 2,
       "price": 299,
       "popularity": 78,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course10.jpg",
       "scheduleddate": "2024-07-15",
       "description": "In this course, learners will be going the study the Internet of Things (IoT) security. Starting from the Internet of Things (IoT) security introduction, learners will get an idea about why security is required in the Internet of Things (IoT)."
@@ -127,7 +157,10 @@
       "duration": 8,
       "price": 549,
       "popularity": 43,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course11.jpg",
       "scheduleddate": "2024-08-01",
       "description": "Whether you want to get your first job in IT security, become a white hat hacker, or prepare to check the security of your own home network, Udemy offers practical and accessible ethical hacking courses to help keep your networks safe from cybercriminals."
@@ -139,7 +172,10 @@
       "duration": 7,
       "price": 449,
       "popularity": 60,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course12.jpg",
       "scheduleddate": "2024-08-15",
       "description": "In this course, you will be learning various Cloud Migration tools and services available on Microsoft Azure Cloud Platform."
@@ -151,7 +187,10 @@
       "duration": 3,
       "price": 299,
       "popularity": 91,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course13.jpg",
       "scheduleddate": "2024-09-03",
       "description": "This may be the most useful course you have ever taken!  ChatGPT and AI are revolutionizing all industries.  ChatGPT is perhaps the largest single step in the technology industry, ever! ChatGPT has been designed to generate human-like responses to natural language input, with the purpose of assisting and communicating with humans. The benefits are enormous to all industries, especially the IT industry!"
@@ -163,7 +202,10 @@
       "duration": 7,
       "price": 399,
       "popularity": 49,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course14.jpg",
       "scheduleddate": "2024-09-15",
       "description": "The Scrum Master assessment is an important tool for assessing an individual's knowledge and skills related to the Scrum framework, which is a popular Agile project management methodology used by companies worldwide."
@@ -175,31 +217,71 @@
       "duration": 15,
       "price": 599,
       "popularity": 13,
-      "availability": "Klassrum/Distanskurs",
+      "learningType": {
+        "classroom": true,
+        "distance": true
+      },
       "imageUrl": "course15.jpg",
       "scheduleddate": "2024-10-01",
       "description": "Welcome this comprehensive Ethical Hacking course! This course assumes you have NO prior knowledge! It starts with you from scratch and takes you step-by-step teaching you how to hack systems like black-hat hackers and secure them like security experts!"
     }
   ],
-
   "users": [
     {
-      "id": 1,
-      "username": "user1",
-      "password": "hashed_password_1",
-      "name": "User 1",
-      "billingAddress": "Address 1",
-      "email": "user1@example.com",
-      "mobileNumber": "123456789"
+      "fullname": "Test User 2",
+      "mobileNumber": "17891788",
+      "billingAddress": "Storgatan 2",
+      "username": "testuser2@test.com",
+      "password": "test123",
+      "enrolledCourses": [],
+      "id": 1
     },
     {
-      "id": 2,
-      "username": "user2",
-      "password": "hashed_password_2",
-      "name": "User 2",
-      "billingAddress": "Address 2",
-      "email": "user2@example.com",
-      "mobileNumber": "123456789"
+      "fullname": "Test User 1",
+      "mobileNumber": "17891788",
+      "billingAddress": "Storgatan 1",
+      "username": "testuser1@test.com",
+      "password": "test123",
+      "enrolledCourses": [],
+      "id": 2
+    }
+  ],
+  "bookings": [
+    {
+      "courseId": "4",
+      "courseTitle": "Mastering DNS on Windows Server",
+      "classroom": false,
+      "distance": true,
+      "fullname": "Test User 1",
+      "billingAddress": "Adress2",
+      "username": "testuser2@test.com",
+      "mobileNumber": "4189184",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "courseId": "2",
+      "courseTitle": "Azure Fundamentals",
+      "classroom": true,
+      "distance": false,
+      "fullname": "Test User 1",
+      "billingAddress": "Storgatan 1",
+      "username": "testuser1@test.com",
+      "mobileNumber": "17891788",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "courseId": "2",
+      "courseTitle": "Azure Fundamentals",
+      "classroom": true,
+      "distance": false,
+      "fullname": "Test User 2",
+      "billingAddress": "Adress2",
+      "username": "testuser2@test.com",
+      "mobileNumber": "17891788",
+      "userId": 1,
+      "id": 3
     }
   ]
 }

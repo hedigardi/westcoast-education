@@ -8,6 +8,9 @@
     <link rel="icon" type="image/x-icon" href="/content/images/favicon.ico">
     <link rel="stylesheet" href="/content/css/style.css">
     <script src="/scripts/course-details.js" defer type="module"></script>
+    <script src="/scripts/user-signup.js" defer type="module"></script>
+    <script src="/scripts/user-booking.js" defer type="module"></script>
+    <script src="/scripts/user-signin.js" defer type="module"></script>
     <script src="https://kit.fontawesome.com/55174c58a9.js" crossorigin="anonymous"></script>
     <title>WestCoast Education | Kursdetaljer</title>
 </head>
@@ -34,59 +37,91 @@
     <main>
         <section class="page-title">
 			<h2>Mer information om kursen</h2>
-		</section>      
+		</section> 
+        <section class="courses" id="loggedIn-userInfo"></section>     
         <section class="courses" id="course-details-container"></section>
-
-        <section class="courses" id="registration">
+        
+        <section class="courses" id="signin">
             <div class="course-card-details">
-                <h2>Ej inloggad</h2>
-                <form id="userForm">
+                <h2>Logga in</h2>
+                <form id="signinForm">
                     <div>
-                        <label for="username">Användarnamn</label>
-                        <input type="text" name="username" id="username" placeholder="Ange användarnamn">
+                        <label for="username">Användarnamn (E-postadress)</label>
+                        <input type="email" name="username" id="usernameSignin" placeholder="Ange E-postadress">
                     </div>
                     <div>
                         <label for="password">Lösenord</label>
-                        <input type="password" name="password" id="password" placeholder="Ange lösenord">
+                        <input type="password" name="password" id="passwordSignin" placeholder="Ange lösenord">
                     </div>
                     <div>
                         <button type="submit" class="button-add" id="signinButton">Logga in</button>
-                        <button type="submit" class="button-create" id="registerButton">Skapa konto</button>
                     </div>
                 </form>
             </div>
         </section>
 
-        <section class="courses" id="logged-in">
+        <section class="courses" id="signup">
             <div class="course-card-details">
-                <h2>Inloggad</h2>
+                <h2>Registrera</h2>
+                <form id="signupForm">
+                    <div>
+                        <label for="fullname">Ditt namn</label>
+                        <input type="text" name="fullname" id="fullnameSignup" placeholder="Ange ditt namn">
+                    </div>
+                    <div>
+                        <label for="mobileNumber">Mobilnummer</label>
+                        <input type="tel" name="mobileNumber" id="mobileNumberSignup" placeholder="Ange mobilnummer">
+                    </div>
+                    <div>
+                        <label for="billingAddress">Faktureringsadress</label>
+                        <input type="text" name="billingAddress" id="billingAddressSignup" placeholder="Ange faktureringsadress">
+                    </div>
+                    <div>
+                        <label for="username">Användarnamn (E-postadress)</label>
+                        <input type="email" name="username" id="usernameSignup" placeholder="Ange E-postadress">
+                    </div>
+                    <div>
+                        <label for="password">Lösenord</label>
+                        <input type="password" name="password" id="passwordSignup" placeholder="Ange lösenord">
+                    </div>
+                    <div>
+                        <button type="submit" class="button-create" id="signupButton">Skapa konto</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="courses" id="booking">
+            <div class="course-card-details">
+                <h2>Boka Kurs</h2>
                 <form id="bookingForm">
                 <div>
-                    <label for="availability">Tillgänglighet</label>
-                    <select required name="availability" id="availability">
-                        <option value="">Välj tillgänglighet</option>
-                        <option value="Klassrum">Klassrum</option>
-                        <option value="Distanskurs">Distanskurs</option>
-                    </select>
+                    <label>Undervisningsupplägg</label>
+                    <div>
+                        <input type="checkbox" name="classroom" id="classroom">
+                        <label for="classroom">Klassrum</label>        
+                        <input type="checkbox" name="distance" id="distance">
+                        <label for="distance">Distans</label>
+                    </div>
                 </div>
                 <div>
-                    <label for="name">Ditt namn</label>
-                    <input type="text" name="name" id="name" placeholder="Ange ditt namn">
+                    <label for="fullname">Ditt namn</label>
+                    <input type="text" name="fullname" id="fullnameBooking" placeholder="Ange ditt namn">
                 </div>
                 <div>
-                    <label for="address">Faktureringsadress</label>
-                    <input type="text" name="address" id="address" placeholder="Ange faktureringsadress">
+                    <label for="billingAddress">Faktureringsadress</label>
+                    <input type="text" name="billingAddress" id="billingAddressBooking" placeholder="Ange faktureringsadress">
                 </div>
                 <div>
-                    <label for="email">E-postadress</label>
-                    <input type="email" name="email" id="email" placeholder="Ange e-postadress">
+                    <label for="username">Användarnamn (E-postadress)</label>
+                    <input type="email" name="username" id="usernameBooking" placeholder="Ange E-postadress">
                 </div>
                 <div>
-                    <label for="phone">Mobilnummer</label>
-                    <input type="tel" name="phone" id="phone" placeholder="Ange mobilnummer">
+                    <label for="mobileNumber">Mobilnummer</label>
+                    <input type="tel" name="mobileNumber" id="mobileNumberBooking" placeholder="Ange mobilnummer">
                 </div>
                 <div>
-                    <button type="submit" class="button-add">Boka kurs</button>
+                    <button type="submit" class="button-add" id="bookingButton">Boka kurs</button>
                 </div>
             </form>
             </div>
