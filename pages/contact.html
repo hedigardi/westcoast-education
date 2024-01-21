@@ -7,6 +7,7 @@
     <meta name="description" content="Välkommen till WestCoast Education, en plattform för tekniska utbildningar">
     <link rel="icon" type="image/x-icon" href="/content/images/favicon.ico">
     <link rel="stylesheet" href="/content/css/style.css">
+    <script src="/scripts/nav.js" defer type="module"></script>
     <title>WestCoast Education | Kontakt</title>
 </head>
 <body>
@@ -32,7 +33,33 @@
     <main>
         <section class="page-title">
 			<h2>Kontakt</h2>
-		</section>      
+		</section> 
+        <section class="courses">
+            <div class="container-card">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <form id="contactForm">
+                    <div>
+                        <label for="fullname">Ditt namn</label>
+                        <input type="text" name="fullname" id="fullnameContact" placeholder="Ange ditt namn">
+                    </div>
+                    <div>
+                        <label for="mobileNumber">Mobilnummer</label>
+                        <input type="tel" name="mobileNumber" id="mobileNumberContact" placeholder="Ange mobilnummer">
+                    </div>
+                    <div>
+                        <label for="email">E-postadress</label>
+                        <input type="email" name="email" id="emailContact" placeholder="Ange E-postadress">
+                    </div>
+                    <div>
+                        <label for="description">Beskrivning</label>
+                        <textarea name="description" id="descriptionContact" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="button-add" id="sendButton">Skicka</button>
+                    </div>
+                </form>
+            </div>
+        </section>      
     </main>
 
     <footer>

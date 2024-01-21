@@ -1,5 +1,10 @@
 import HttpClient from './http.js';
 import { createAdminBookingSection } from './dom.js';
+import { navAnimation } from "./nav.js";
+
+async function initPage() {
+  navAnimation();
+}
 
 window.addEventListener("DOMContentLoaded", fetchAndDisplayBookings);
 
@@ -31,3 +36,5 @@ function displayBookings(users, courses, bookings) {
     }
   });
 }
+
+document.addEventListener('DOMContentLoaded', initPage);

@@ -1,5 +1,6 @@
 import HttpClient from './http.js';
 import { createCourseList } from './dom.js';
+import { navAnimation } from "./nav.js";
 
 const initPage = async () => {
   const url = 'http://localhost:3000/courses';
@@ -13,6 +14,8 @@ const initPage = async () => {
   cards.forEach((card) => {
     card.addEventListener('click', selectedCourse);
   });
+
+  navAnimation();
 };
 
 const selectedCourse = (e) => {

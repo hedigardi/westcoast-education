@@ -1,7 +1,12 @@
 import HttpClient from './http.js';
 import { convertFormDataToJson } from './utilities.js';
+import { navAnimation } from "./nav.js";
 
 const form = document.querySelector('#addCourseForm');
+
+async function initPage() {
+  navAnimation();
+}
 
 const addCourse = async (e) => {
   e.preventDefault();
@@ -33,3 +38,4 @@ const saveCourse = async (course) => {
 };
 
 form.addEventListener('submit', addCourse);
+document.addEventListener('DOMContentLoaded', initPage);

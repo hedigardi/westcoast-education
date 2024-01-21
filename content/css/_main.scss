@@ -232,6 +232,16 @@ footer {
     bottom: 0;
 }
 
+
+@media only screen and (max-width: 1024px) {
+
+    .course-card {
+        flex-basis: 400px;
+        flex-grow: 1;
+    }
+}
+
+
 @media only screen and (max-width: 768px) {
 
     .courses {
@@ -239,7 +249,7 @@ footer {
     }
 
     .course-card {
-        flex-basis: 200px;
+        flex-basis: 500px;
         flex-grow: 1;
     }
 
