@@ -228,46 +228,102 @@
   ],
   "users": [
     {
-      "fullname": "Test User 2",
-      "mobileNumber": "17891788",
-      "billingAddress": "Storgatan 2",
-      "username": "testuser2@test.com",
-      "password": "test123",
+      "fullname": "Isidor Andersson",
+      "mobileNumber": "0701234567",
+      "billingAddress": "Lidbovägen 90, 941 84 PITEÅ",
+      "username": "isidorandersson@outlook.se",
+      "password": "Ceew3nee1Ph",
       "id": 1
     },
     {
-      "fullname": "Test User 1",
-      "mobileNumber": "17891788",
-      "billingAddress": "Storgatan 1",
-      "username": "testuser1@test.com",
-      "password": "test123",
+      "fullname": "Blenda Eklund",
+      "mobileNumber": "0747654321",
+      "billingAddress": "Nöjesgatan 42, 534 14 VARA",
+      "username": "blendaeklund@gmail.com",
+      "password": "Pulty1952",
       "id": 2
+    },
+    {
+      "fullname": "Magdalena Nilsson",
+      "mobileNumber": "0762346751",
+      "billingAddress": "Trädgårdsgatan 78, 825 00 IGGESUND",
+      "username": "magdalenanilsson@gmail.com",
+      "password": "Ievisuta9s",
+      "id": 3
     }
   ],
   "bookings": [
     {
-      "courseId": "4",
-      "courseTitle": "Mastering DNS on Windows Server",
+      "courseId": "6",
+      "courseTitle": "Cyber Security",
       "classroom": false,
       "distance": true,
-      "fullname": "Test User 1",
-      "billingAddress": "Adress2",
-      "username": "testuser2@test.com",
-      "mobileNumber": "4189184",
-      "userId": 1,
+      "fullname": "Blenda Eklund",
+      "billingAddress": "Nöjesgatan 42, 534 14 VARA",
+      "username": "blendaeklund@gmail.com",
+      "mobileNumber": "0747654321",
+      "userId": 2,
       "id": 1
     },
     {
-      "courseId": "1",
-      "courseTitle": "Cloud Computing for Beginners",
+      "courseId": "7",
+      "courseTitle": "Introduction to Vulnerability Management",
       "classroom": true,
       "distance": false,
-      "fullname": "hedi",
-      "billingAddress": "Adress2",
-      "username": "testuser1@test.com",
-      "mobileNumber": "4189184",
+      "fullname": "Blenda Eklund",
+      "billingAddress": "Nöjesgatan 42, 534 14 VARA",
+      "username": "blendaeklund@gmail.com",
+      "mobileNumber": "0747654321",
       "userId": 2,
       "id": 2
+    },
+    {
+      "courseId": "6",
+      "courseTitle": "Cyber Security",
+      "classroom": false,
+      "distance": true,
+      "fullname": "Magdalena Nilsson",
+      "billingAddress": "Trädgårdsgatan 78, 825 00 IGGESUND",
+      "username": "magdalenanilsson@gmail.com",
+      "mobileNumber": "0762346751",
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "courseId": "10",
+      "courseTitle": "Security in IoT",
+      "classroom": false,
+      "distance": true,
+      "fullname": "Magdalena Nilsson",
+      "billingAddress": "Trädgårdsgatan 78, 825 00 IGGESUND",
+      "username": "magdalenanilsson@gmail.com",
+      "mobileNumber": "0762346751",
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "courseId": "10",
+      "courseTitle": "Security in IoT",
+      "classroom": false,
+      "distance": true,
+      "fullname": "Isidor Andersson",
+      "billingAddress": "Lidbovägen 90, 941 84 PITEÅ",
+      "username": "isidorandersson@outlook.se",
+      "mobileNumber": "0701234567",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "courseId": "13",
+      "courseTitle": "ChatGPT for IT Workers",
+      "classroom": false,
+      "distance": true,
+      "fullname": "Isidor Andersson",
+      "billingAddress": "Lidbovägen 90, 941 84 PITEÅ",
+      "username": "isidorandersson@outlook.se",
+      "mobileNumber": "0701234567",
+      "userId": 1,
+      "id": 6
     }
   ]
 }
