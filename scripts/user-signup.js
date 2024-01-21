@@ -16,10 +16,6 @@ const addUser = async (e) => {
 };
 
 const saveUser = async (user) => {
-  if (!Array.isArray(user.enrolledCourses)) {
-    user.enrolledCourses = [];
-  }
-
   const url = 'http://localhost:3000/users';
   const http = new HttpClient(url);
 

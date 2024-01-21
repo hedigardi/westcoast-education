@@ -23,11 +23,10 @@ function displayBookings(users, courses, bookings) {
   const adminBookingsContainer = document.getElementById('adminBookings');
 
   courses.forEach(course => {
-    const enrolledUsers = users.filter(user => user.enrolledCourses.includes(course.title));
     const courseBookings = bookings.filter(booking => booking.courseId === String(course.id)); 
 
-    if (enrolledUsers.length > 0 || courseBookings.length > 0) {
-      const courseSection = createAdminBookingSection(course, enrolledUsers, courseBookings);
+    if (courseBookings.length > 0) {
+      const courseSection = createAdminBookingSection(course, [], courseBookings);
       adminBookingsContainer.appendChild(courseSection);
     }
   });
