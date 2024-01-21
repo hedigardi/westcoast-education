@@ -242,22 +242,6 @@
       "username": "testuser1@test.com",
       "password": "test123",
       "id": 2
-    },
-    {
-      "fullname": "Hedi",
-      "mobileNumber": "004740314401",
-      "billingAddress": "Bredalsveien16b",
-      "username": "hedigardi@gmail.com",
-      "password": "12345",
-      "id": 3
-    },
-    {
-      "fullname": "Hedi G",
-      "mobileNumber": "78578578",
-      "billingAddress": "Storgatan 1",
-      "username": "hedi@hedi.com",
-      "password": "123456",
-      "id": 4
     }
   ],
   "bookings": [
@@ -274,40 +258,16 @@
       "id": 1
     },
     {
-      "courseId": "2",
-      "courseTitle": "Azure Fundamentals",
+      "courseId": "1",
+      "courseTitle": "Cloud Computing for Beginners",
       "classroom": true,
       "distance": false,
-      "fullname": "Test User 1",
-      "billingAddress": "Storgatan 1",
+      "fullname": "hedi",
+      "billingAddress": "Adress2",
       "username": "testuser1@test.com",
-      "mobileNumber": "17891788",
+      "mobileNumber": "4189184",
       "userId": 2,
       "id": 2
-    },
-    {
-      "courseId": "2",
-      "courseTitle": "Azure Fundamentals",
-      "classroom": true,
-      "distance": false,
-      "fullname": "Test User 2",
-      "billingAddress": "Adress2",
-      "username": "testuser2@test.com",
-      "mobileNumber": "17891788",
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "courseId": "9",
-      "courseTitle": "Fundamentals of Network Security",
-      "classroom": false,
-      "distance": true,
-      "fullname": "Test User 1",
-      "billingAddress": "Adress2",
-      "username": "testuser1@test.com",
-      "mobileNumber": "17891788",
-      "userId": 3,
-      "id": 4
     }
   ]
 }
