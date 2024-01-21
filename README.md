@@ -1,7 +1,7 @@
 # WestCoast Education
 Welcome to WestCoast Education platform.
 
-<img src="https://imgur.com/a/D5rxM19" alt="WestCoast Education Platform" width="650px">
+<img src="https://imgur.com/a/D5rxM19.png" alt="WestCoast Education Platform" width="650px">
 
 ## Installation
 1. Clone the WestCoast-Education repository:
