@@ -19,8 +19,14 @@ async function initPage(): Promise<void> {
 const loadCourses = async (): Promise<string[]> => {
   const url = 'http://localhost:3000/courses';
   const http = new HttpClient(url);
-  const courses = await http.get();
-  return courses;
+  
+  try {
+    const courses: string[] = await http.get();
+    return courses;
+  } catch (error) {
+      console.error('Ett fel uppstod vid hämtning av kurser:', error);
+      throw error; 
+  }
 };
 
 document.addEventListener('DOMContentLoaded', initPage);
